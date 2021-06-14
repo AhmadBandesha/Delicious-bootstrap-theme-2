@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.main-slider{
+    height: 100vh;
+    width: 100%;
+}
+.text-div{
+    height:55%;
+    width: 55%;
+    /* border: 1px solid white; */
+    position: absolute;
+    top: 30%;
+    left: 22.5%;
+}
+.text-div h1{
+    font-family: 'Dancing Script', cursive;
+}
+.btn-div{
+    height: auto;
+    width: 400px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width:992px){
+    .icon2{
+        display: none !important;
+    }
+    .contact{
+        display: flex;
+        justify-content: center !important;
+        margin-left: -50px ;
+    }
+}
+
+.nav-bar{
+    height: 80px;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 8vh;
+    z-index: 100 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+.nav-bar h1{
+    position: absolute;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    left: 40px;
+    cursor: pointer;
+}
+.ul1{
+    position: relative;
+    height: 100%;
+    width: 700px;
+    top: 9px;
+    display: flex;
+    right: 220px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    /* border: 1px solid white; */
+}
+#ul-btn{
+    position: absolute;
+    right: 80px;
+}
+.ul1 li a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Antic Slab', serif;
+    font-weight: 100;
+}
+.ul1 li{
+    position: relative;
+    overflow: hidden;
+    padding: 3px 0; 
+}
+.ul1 li::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    border-bottom: 3px solid #FCAE3A;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: .4s;
+}
+.ul1 li:hover::before{
+    transform-origin: center;
+    transform: scaleX(1);
+    cursor: pointer;
+}
+label #btn,
+label #cancel{
+    position: absolute;
+    right: 60px;
+    color: white;
+    font-size: 30px;
+    line-height: 0px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width:1092px){
+    label #btn{
+        display: block;
+    }
+    .ul1{
+        position: fixed;
+        height: 70vh;
+        width: 80%;
+        background-color: white;
+        border: 1px solid lightgray;
+        top: 120px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid white; */
+        z-index: 1000;
+    }
+    .ul1 li a{
+        color: black;
+    }
+    #ul-btn{
+        position: absolute;
+        right: 110px;
+    }
+    #check:checked ~ .ul1{
+        left: 10%;
+        transition: .4s;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+}
+
+.card:hover{
+    background-color: #FCAE3A;
+    box-shadow: 2px 2px 10px 2px lightgray !important;
+}
+.card-body:hover{
+    transform: translateY(-20px);
+    color: white !important;
+}
+.card-body>h2{
+    color: #FCAE3A;
+}
+.card-body:hover.card-body>h2{
+    color: white !important;
+}
+
+.event-bg{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(events-bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 150%;
+}
+.img1:hover .outer-img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.chef-sec-img{
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url(chefs-bg.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.chef-icon-div{
+    position: absolute;
+    bottom: -80px;
+    width: 90%;
+    left: 5%;
+}
+.iconic>i:hover{
+    cursor: pointer;
+    color: #FCAE3A;
+}
+.star-imgs{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(testimonials-bg.jpg);
+    background-size: 100% 100%;
+}
+.map-icon-div:hover.map-icon-div>i{
+    background-color: #FCAE3A !important;
+    color: white !important;
+}
+.footer-icon{
+    width: 280px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-icon>i{
+    height: 40px;
+    width: 40px;
+    background-color: #4d4944;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: .5s;
+}
+.footer-icon>i:hover{
+    cursor: pointer;
+    background-color: #FCAE3A;
+}
